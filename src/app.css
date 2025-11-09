@@ -1,0 +1,286 @@
+/* Imports */
+@import 'tailwindcss';
+
+/* Custom Font Imports */
+@import '$css/fonts.css';
+
+/* Custom Animation Imports */
+@import '$css/animations.css';
+
+/* Plugins */
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+@plugin 'tailwindcss-animate';
+
+/* Global Settings */
+* {
+    margin:                                 0;
+    padding:                                0;
+    box-sizing:                             border-box;
+}
+
+*,*::before,
+*::after {
+    box-sizing:                             border-box;
+}
+
+:root {
+    /*      ########################      */
+    /*         Global Variables           */
+    /*      ########################      */
+
+    /* Font Variables */
+    --font-light-font-family:               "Minimo Light", sans-serif;
+    --font-medium-font-family:              "Minimo Medium", sans-serif;
+    --font-bold-font-family:                "Minimo Bold", sans-serif;
+
+    --font-normal-font-style:               normal;
+    --font-italic-font-style:               italic;
+
+    --font-ultra-light-font-weight:         100;
+    --font-light-font-weight:               300;
+    --font-medium-font-weight:              500;
+    --font-heavy-font-weight:               700;
+    --font-ultra-heavy-font-weight:         900;
+
+    --font-hero-line-height:                0.75rem;
+    --font-title-line-height:               2.5rem;
+    --font-paragraph-line-height:           1.5rem;
+
+    --font-hero-font-size:                  5rem;
+    --font-title-font-size:                 2.5rem;
+    --font-paragraph-font-size:             1.050rem;
+    --font-label-font-size:                 1.0rem;
+    --font-button-font-size:                0.875rem;
+    --font-link-font-size:                  0.75rem;
+    --font-caption-font-size:               0.5rem;
+
+    --hero-letter-spacing:                  -0.015rem;
+    --title-letter-spacing:                 0.025rem;
+    --paragraph-letter-spacing:             0.01rem;
+
+    /* Logo Variables */
+    --logo-light:                           url("$logos/logo-light.png");
+    --logo-dark:                            url("$logos/logo-dark.png");
+
+    --logo-type-light:                      url("$logos/type-logo-light.png");
+    --logo-type-dark:                       url("$logos/type-logo-dark.png");
+
+    --logo-nav-width:                       3.5rem;
+    --logo-nav-height:                      3.5rem;
+
+    --logo-type-nav-width:                  full;
+    --logo-type-nav-height:                 full;
+
+    /* Logo Color Variables */
+    --logo-color:                           oklch(0.504 0.2027 21.08 / 75%);            /* #BC002DBF; Primary/Logo Color */
+    --logo-color-lighter-accent:            oklch(0.6452 0.2435 16.52 / 75%);           /* #FF2457BF; Primary/Logo Color Lighter Accent */
+    --logo-color-darker-accent:             oklch(0.289 0.1157 17.5 / 75%);             /* #570014BF; Primary/Logo Color Darker Accent */
+
+    /* Background Color Variables */
+    --bg-light-mode-base:                   oklch(0.9581 0 0);                          /* #F1F1F1; Dark Mode Primary Background Color */
+    --bg-light-mode-primary:                oklch(0.8373 0 0 / 75%);                    /* #C9C9C9BF; Light Mode Primary Background Color */
+    --bg-light-mode-secondary:              oklch(0.8767 0 0 / 75%);                    /* #D6D6D6BF; Light Mode Secondary Background Color */
+    --bg-light-mode-accent:                 oklch(0.9157 0 0 / 75%);                    /* #E3E3E3BF; Light Mode Accent Background Color */
+    --bg-light-mode-mask:                   oklch(0.8373 0 0);
+
+    --bg-dark-mode-base:                    oklch(0.1638 0 0);                          /* #0E0E0E; Dark Mode Primary Background Color */
+    --bg-dark-mode-primary:                 oklch(0.2267 0 0 / 75%);                    /* #1D1D1DBF; Dark Mode Primary Background Color */
+    --bg-dark-mode-secondary:               oklch(0.2801 0 0 / 75%);                    /* #292929BF; Dark Mode Secondary Background Color */
+    --bg-dark-mode-accent:                  oklch(0.3311 0 0 / 75%);                    /* #363636BF; Dark Mode Accent Background Color */
+    --bg-dark-mode-mask:                    oklch(0.2267 0 0);
+
+    /* Text Color Variables */
+    --text-light-mode-primary:              var(--bg-dark-mode-secondary);                /* Light Mode Primary Text */
+    --text-light-mode-secondary:            oklch(0.5192 0 0 / 75%);                    /* #696969BF; Light Mode Secondary Text */
+
+    --text-dark-mode-primary:               var(--bg-light-mode-secondary);               /* Dark Mode Primary Text */
+    --text-dark-mode-secondary:             oklch(0.6746 0 0 / 75%);                    /* #969696BF; Dark Mode Secondary Text */
+
+    --text-accent:                          oklch(0.504 0.2027 21.08 / 75%);            /* #BC002DBF; Text Accent */
+
+    /* Border Variables */
+    --border-radius-rounded-edge:           0.75rem;
+    --border-radius-rounded:                1rem;
+    --border-radius-rounded-full:           2.25rem;
+
+    --border-light-mode:                    var(--text-dark-mode-secondary);              /* Light Mode Border */
+    --border-dark-mode:                     var(--text-light-mode-secondary);             /* Dark Mode Border */
+
+    --border-transparent-light-mode:        oklch(0.8767 0 0 / 15%);                    /* Transparent Light Mode Border */
+    --border-transparent-dark-mode:         oklch(0.2801 0 0 / 15%);                    /* Transparent Dark Mode Border */
+
+    --border-card-light-mode:               solid 0.075rem var(--bg-dark-mode-secondary); /* Light Mode Border Card */
+    --border-card-dark-mode:                solid 0.075rem var(--bg-light-mode-secondary);/* Dark Mode Border Card */
+
+    --border-card-transparent-light-mode:   solid 0.075rem oklch(0.8373 0 0 / 75%);     /* Transparent Light Mode Border */
+    --border-card-transparent-dark-mode:    solid 0.075rem oklch(0.2267 0 0 / 75%);     /* Transparent Dark Mode Border */
+
+    /* Highlight Variables */
+    --highlight-light-mode:                 oklch(0.6068 0 0 / 75%);                    /* #828282BF; Light Mode Highlight */
+
+    --highlight-dark-mode:                  oklch(0.5895 0 0 / 75%);                    /* #7D7D7DBF; Dark Mode Highlight */
+
+    /* Gradient Variables */
+    --gradient-light-mode:                  linear-gradient(0deg, var(--bg-light-mode-secondary) 95%, var(--bg-light-mode-accent));           /* Light Mode Gradient */
+    --gradient-hover-light-mode:            linear-gradient(0deg,  var(--bg-light-mode-secondary), var(--bg-light-mode-accent));              /* Light Mode Gradient Hover */
+
+    --gradient-dark-mode:                   linear-gradient(0deg, var(--bg-dark-mode-secondary) 95%, var(--bg-dark-mode-accent));         /* Dark Mode Gradient */
+    --gradient-hover-dark-mode:             linear-gradient(0deg, var(--bg-dark-mode-secondary), var(--bg-dark-mode-accent));             /* Dark Mode Gradient Hover */
+
+    /* Shadow Variables */
+    --shadow-light-mode:                    0px 0.125rem 0.125rem oklch(0.8373 0 0 / 10%), 0em 0.25rem 0.25rem oklch(0.8373 0 0 / 15%);         /* Light Mode Shadow */
+
+    --shadow-dark-mode:                     0px 0.125rem 0.125rem oklch(0.2267 0 0 / 10%), 0em 0.25rem 0.25rem oklch(0.2267 0 0 / 15%);     /* Dark Mode Shadow */
+
+    /* Button Variables */
+    --button-active:                        var(--logo-color);                            /* Button on Hover */
+
+    --button-register-active-light:         var(--gradient-hover-light-mode);             /* Light Mode Background Button on Hover */
+
+    --button-register-active-dark:          var(--gradient-hover-dark-mode);              /* Dark Mode Background Button on Hover */
+
+    /* Footer Variables */
+    --footer-bg-light-mode:                 var(--bg-light-mode-primary);
+    --footer-bg-dark-mode:                  var(--bg-dark-mode-primary);
+
+    /* Scrollbar Variables */
+    --scrollbar-width:                      thin;
+    --scrollbar-color-light-mode:           var(--bg-light-mode-accent)             var(--bg-light-mode-secondary);
+    --scrollbar-color-dark-mode:            var(--bg-dark-mode-accent)              var(--bg-dark-mode-secondary);
+    
+    /* State Variables */
+    --state-positive:                       oklch(0.5842 0.1418 146.12 / 75%);          /* #379144BF; Positive/Success State */
+    --state-negative:                       oklch(0.5028 0.2021 20.72 / 74.9%);         /* #BC002DBF; Negative/Danger State */
+    --state-signal:                         oklch(0.9062 0.1927 105.48 / 74.9%);        /* #F3E600BF; Signal/Warning State */
+    --state-focus:                          oklch(0.5625 0.2405 270.2 / 74.9%);         /* #455CFFBF; Focus/Info State */
+
+    /* Icon Variables */
+    --sun:                                  var(--logo-color);
+    --moon:                                 var(--text-secondary);
+    --GithubLogo:                           var(--text-primary);
+
+    /* Container & Padding Variables */
+    --container-nav-padding:                clamp(1rem, 5vw, 2.5rem) 1rem;
+    --container-section-padding:            clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    --container-contain-padding:            86rem;
+    --container-link-padding:               0.25rem 1rem;
+    --container-button-padding:             0.50rem 1.25rem;
+    --container-padding:                    1rem;
+
+    /* Margin Variables */
+    --margin-hero-caption:                  2rem auto 2rem auto;
+
+    /* Gap Variables */
+    --gap-hero-caption:                     0.625rem;
+    --gap:                                  3rem;
+
+    /* Z-Index Variables */
+    --z-index-bg-layer:                     -2;
+    --z-index-bg-art:                       -1;
+    --z-index-default:                      0;
+    --z-index-background:                   1;
+    --z-index-foreground:                   2;
+    --z-index-overlay-background:           3;
+    --z-index-overlay-foreground:           4;
+    --z-index-container-background:         5;
+    --z-index-container-foreground:         6;
+    --z-index-container-content:            7;
+    --z-index-container-button-background:  8;
+    --z-index-container-button-foreground:  9;
+    --z-index-container-button-content:     10;
+
+    /* Loader Variables */
+    --loader-text-opacity:                  0.75;
+    --loader-text-size:                     var(--font-label-font-size);
+
+    /* Loading Animation Variables */
+    --loading-animation-delay-0s:           0s;
+    --loading-animation-delay-01s:          0.1s;
+    --loading-animation-delay-02s:          0.2s;
+    --loading-animation-delay-03s:          0.3s;
+    --loading-animation-delay-04s:          0.4s;
+    --loading-animation-delay-05s:          0.5s;
+    --loading-animation-delay-06s:          0.6s;
+    --loading-animation-delay-07s:          0.7s;
+    --loading-animation-delay-08s:          0.8s;
+    --loading-animation-delay-09s:          0.9s;
+    --loading-animation-delay-1s:           1s;
+
+    /*      ########################      */
+    /*         Global Root Values         */
+    /*      ########################      */
+    margin:                                 0;
+    padding:                                0;
+    box-sizing:                             border-box;
+    view-transition-name:                   root;
+    scrollbar-width:                        var(--scrollbar-width);
+}
+
+/* TailwindCSS Add-On Variables */
+@theme {
+    --color-txt-primary:                    var(--text-primary);
+    --color-txt-secondary:                  var(--text-secondary);
+}
+
+/* Light Theme | Light Mode */
+html.light {
+    --bg-primary:                           var(--bg-light-mode-primary);
+    --bg-secondary:                         var(--bg-light-mode-secondary);
+    --bg-accent:                            var(--bg-light-mode-accent);
+    --logo:                                 var(--logo-dark);
+    --type-logo:                            var(--logo-type-dark);
+    --text-primary:                         var(--text-light-mode-primary);
+    --text-secondary:                       var(--text-light-mode-secondary);
+    --border:                               var(--border-light-mode);
+    --border-card:                          var(--border-card-light-mode);
+    --highlight:                            var(--highlight-light-mode);
+    --gradient:                             var(--gradient-light-mode);
+    --gradient-hover:                       var(--gradient-hover-light-mode);
+    --shadow:                               var(--shadow-light-mode);
+    --button-register-active:               var(--gradient-hover-light-mode);
+    --logo-nav-w:                           var(--logo-nav-width);
+    --logo-nav-h:                           var(--logo-nav-height);
+    --logo-type-nav-w:                      var(--logo-type-nav-width);
+    --logo-type-nav-h:                      var(--logo-type-nav-height);
+    --footer-bg:                            var(--footer-bg-light-mode);
+    --border-card-transparent:              var(--border-card-transparent-light-mode);
+    --border-transparent:                   var(--border-transparent-light-mode);
+    --bg-mask:                              var(--bg-light-mode-mask);
+
+    --button-primary:                       oklch(0.2267 0 0);
+    --button-text-primary:                  oklch(0.8373 0 0);
+
+    scrollbar-color:                        var(--bg-light-mode-primary);
+}
+
+/* Dark Theme | Dark Mode */
+html.dark {
+    --bg-primary:                           var(--bg-dark-mode-primary);
+    --bg-secondary:                         var(--bg-dark-mode-secondary);
+    --bg-accent:                            var(--bg-dark-mode-accent);
+    --logo:                                 var(--logo-light);
+    --type-logo:                            var(--logo-type-light);
+    --text-primary:                         var(--text-dark-mode-primary);
+    --text-secondary:                       var(--text-dark-mode-secondary);
+    --border:                               var(--border-dark-mode);
+    --border-card:                          var(--border-card-dark-mode);
+    --highlight:                            var(--highlight-dark-mode);
+    --gradient:                             var(--gradient-dark-mode);
+    --gradient-hover:                       var(--gradient-hover-dark-mode);
+    --shadow:                               var(--shadow-dark-mode);
+    --button-register-active:               var(--gradient-hover-dark-mode);
+    --logo-nav-w:                           var(--logo-nav-width);
+    --logo-nav-h:                           var(--logo-nav-height);
+    --logo-type-nav-w:                      var(--logo-type-nav-width);
+    --logo-type-nav-h:                      var(--logo-type-nav-height);
+    --footer-bg:                            var(--footer-bg-dark-mode);
+    --border-card-transparent:              var(--border-card-transparent-dark-mode);
+    --border-transparent:                   var(--border-transparent-dark-mode);
+    --bg-mask:                              var(--bg-dark-mode-mask);
+
+    --button-primary:                       oklch(0.8373 0 0);
+    --button-text-primary:                  oklch(0.2267 0 0);
+
+    scrollbar-color:                        var(--bg-dark-mode-primary);
+}

@@ -1,0 +1,58 @@
+/* ################## */
+/*    Minimo Font     */
+/* ################## */
+@font-face {
+    font-family:    "Minimo Bold";
+    src:            url("../../../lib/assets/fonts/Minimo/Minimo Bold.otf") format('opentype');
+    font-weight:    700;
+    font-style:     normal;
+}
+
+@font-face {
+    font-family:    "Minimo Bold Oblique";
+    src:            url("../../../lib/assets/fonts/Minimo/Minimo Bold Oblique.otf") format('opentype');
+    font-weight:    700;
+    font-style:     italic;
+}
+
+@font-face {
+    font-family:    "Minimo Light";
+    src:            url("../../../lib/assets/fonts/Minimo/Minimo Light.otf") format('opentype');
+    font-weight:    300;
+    font-style:     normal;
+}
+
+@font-face {
+    font-family:    "Minimo Light Oblique";
+    src:            url("../../../lib/assets/fonts/Minimo/Minimo Light Oblique.otf") format('opentype');
+    font-weight:    300;
+    font-style:     italic;
+}
+
+@font-face {
+    font-family:    "Minimo Medium";
+    src:            url("../../../lib/assets/fonts/Minimo/Minimo Medium.otf") format('opentype');
+    font-weight:    600;
+    font-style:     normal;
+}
+
+@font-face {
+    font-family:    "Minimo Medium Oblique";
+    src:            url("../../../lib/assets/fonts/Minimo/Minimo Medium Oblique.otf") format('opentype');
+    font-weight:    600;
+    font-style:     italic;
+}
+
+@font-face {
+    font-family:    "Minimo";
+    src:            url("../../../lib/assets/fonts/Minimo/Minimo.otf") format('opentype');
+    font-weight:    500;
+    font-style:     normal;
+}
+
+@font-face {
+    font-family:    "Minimo Oblique";
+    src:            url("../../../lib/assets/fonts/Minimo/Minimo Oblique.otf") format('opentype');
+    font-weight:    500;
+    font-style:     italic;
+}

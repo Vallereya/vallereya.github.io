@@ -1,0 +1,249 @@
+:root {
+    --animate-spinner:      spinner 1s ease-in-out infinite;
+    --animate-fadeup:       fadeup linear forwards;
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes scroll-move {
+    to {
+        transform: translateX(calc(-100% + 100vw))
+    }
+}
+
+@keyframes scroll-x {
+    from {
+        transform: translateX(var(--scroll-start))
+    }
+
+    to {
+        transform: translateX(var(--scroll-end))
+    }
+}
+
+@keyframes rotate-x {
+    to {
+        transform: rotateX(0)
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translateX(0%)translateY(-50%)rotate(0)
+    }
+
+    25% {
+        transform: translateX(0%)translateY(-50%)rotate(90deg)skew(-15deg,-15deg)
+    }
+
+    75% {
+        transform: translateX(0%)translateY(-50%)rotate(270deg)skew(15deg,15deg)
+    }
+
+    100% {
+        transform: translateX(0%)translateY(-50%)rotate(360deg)
+    }
+}
+
+@keyframes status-glow {
+    50% {
+        opacity: .2;
+        transform: scale(2)
+    }
+}
+
+@keyframes fadeup {
+    75% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0)
+    }
+}
+
+@keyframes rotate-perspective {
+    to {
+        transform: rotateX(0)translateY(0)translateX(-50%)
+    }
+}
+
+@keyframes rotate-perspective-back {
+    to {
+        transform: rotateX(0)translateY(-6px)translateX(-50%);
+        opacity: .1
+    }
+}
+
+@keyframes rotate-perspective-dash {
+    to {
+        transform: rotateX(0)
+    }
+}
+
+@keyframes slide-out {
+    100% {
+        opacity: 0;
+        translate: 0 100%
+    }
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0;
+        translate: 0 -100%
+    }
+}
+
+@keyframes scroll {
+    0%,10% {
+        transform: translateY(0)
+    }
+
+    90%,100% {
+        transform: translateY(-66.6666666667%)
+    }
+
+    40%,60% {
+        transform: translateY(-33.3333333333%)
+    }
+}
+
+@keyframes scroll-move-left {
+    to {
+        transform: translateX(0)
+    }
+}
+
+@keyframes phone-mock {
+    0% {
+        transform: translate(-50%,-43%)scale(1.25)
+    }
+
+    25% {
+        transform: translate(-50%,-43%)scale(.5)
+    }
+
+    100% {
+        transform: translate(-50%,-43%)scale(.5)
+    }
+}
+
+@keyframes screen-mock {
+    0% {
+        opacity: 0
+    }
+
+    60% {
+        opacity: 0
+    }
+
+    61% {
+        opacity: .1;
+        transform: translate(-50%,0%)scale(.5)
+    }
+
+    71% {
+        opacity: 1;
+        transform: translate(-50%,-267px)scale(1)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%,-267px)scale(1)
+    }
+}
+
+@keyframes camera {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes loop {
+    to {
+        offset-distance: 100%
+    }
+}
+
+@keyframes rotateOpen {
+    from {
+        transform: rotate(0);
+        opacity: .5
+    }
+
+    75%,100% {
+        transform: rotate(45deg);
+        opacity: 0
+    }
+}
+
+@keyframes rotateClose {
+    from {
+        transform: rotate(-45deg);
+        opacity: .5
+    }
+
+    75%,100% {
+        transform: rotate(0);
+        opacity: 1
+    }
+}
+
+@keyframes glitch {
+    2%,64% {
+        transform: translate(2px,0)skew(0)
+    }
+
+    4%,60% {
+        transform: translate(-2px,0)skew(0)
+    }
+
+    62% {
+        transform: translate(0,0)skew(5deg)
+    }
+}
+
+@keyframes glitchTop {
+    2%,64% {
+        transform: translate(2px,-2px)
+    }
+
+    4%,60% {
+        transform: translate(-2px,2px)
+    }
+
+    62% {
+        transform: translate(13px,-1px)skew(-13deg)
+    }
+}
+
+@keyframes glitchBotom {
+    2%,64% {
+        transform: translate(-2px,0)
+    }
+
+    4%,60% {
+        transform: translate(-2px,0)
+    }
+
+    62% {
+        transform: translate(-22px,5px)skew(21deg)
+    }
+}
+
+@keyframes spinner {
+    to {
+        transform: rotate(360deg)
+    }
+}
