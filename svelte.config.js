@@ -32,8 +32,8 @@ const config = {
             $html: path.resolve("./src/lib/modules/html"),
         },
         paths: {
-            
-        }
+            base: ""
+        },
     },
 	extensions: [
         '.svelte', 
