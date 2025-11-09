@@ -32,7 +32,7 @@ const config = {
             $html: path.resolve("./src/lib/modules/html"),
         },
         paths: {
-            base: process.env.NODE_ENV === "production" ? "/vallereya.github.io" : "",
+            
         }
     },
 	extensions: [

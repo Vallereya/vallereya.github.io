@@ -1,6 +1,5 @@
 <!-- HOMEPAGE GROUP -->
 <script lang="ts">
-    import { base } from "$app/paths";
     import HomeHead from '$components/HomeHead.svelte';
     import HomeBody from '$components/HomeBody.svelte';
     import HomeFoot from '$components/HomeFoot.svelte';
