@@ -1,1 +1,0 @@
-import{o as c,g as i,p as n,q as f,b as u,v as s,w as o}from"./D_BIa_Re.js";function m(a){let e=0,r=n(0),t;return()=>{c()&&(i(r),f(()=>(e===0&&(t=u(()=>a(()=>s(r)))),e+=1,()=>{o(()=>{e-=1,e===0&&(t?.(),t=void 0,s(r))})})))}}export{m as c};
