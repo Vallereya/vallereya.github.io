@@ -1,21 +1,35 @@
-<!-- HOMEPAGE GROUP -->
+<!-- HOMEPAGE -->
 <script lang="ts">
-    import HomeHead from '$components/HomeHead.svelte';
-    import HomeBody from '$components/HomeBody.svelte';
-    import HomeFoot from '$components/HomeFoot.svelte';
+    import Header from '$components/AppHeader.svelte';
+    // import Home from '$components/Home.svelte';
+    // import Footer from '$components/AppFooter.svelte';
 </script>
 
 <main class="home">
+
     <!-- HEAD SECTION -->
     <section class="home-header">
-        <HomeHead />
+        <Header />
     </section>
+
     <!-- BODY SECTION -->
+    <!--
     <section class="home-body">
-        <HomeBody />
+        <Home />
     </section>
+    -->
+
     <!-- FOOT SECTION -->
+    <!--
     <section class="home-footer">
-        <HomeFoot />
+        <Footer />
     </section>
+    -->
 </main>
+
+<style>
+    main {
+        margin:                             0;
+        padding:                            0;
+    }
+</style>

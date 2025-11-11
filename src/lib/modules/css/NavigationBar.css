@@ -1,188 +1,31 @@
-body {
-    margin:                             0;
-    padding:                            0;
-}
-
-/* The Navigation Bar */
-.navigation-bar {
-    background-color:                   transparent;
-    position:                           absolute;
-    font-family:                        "Minimo Bold", sans-serif;
-    font-style:                         var(--font-normal-font-style);
-    font-weight:                        var(--font-heavy-font-weight);
-    line-height:                        var(--font-paragraph-line-height);
-    font-size:                          var(--font-label-font-size);
-    color:                              var(--text-primary);
-    z-index:                            var(--z-index-container-content);
-    letter-spacing:                     var(--title-letter-spacing);
-}
-
-#nav-hover:hover {
-    color:                              var(--logo-color);
-}
-
-/*
-.navigation-bar:hover {
-    
-}
-
-.navigation-bar-container-logo-group {
-
-}
-
-.navigation-bar-container-logo {
-
-} 
-*/
-
-.navigation-bar-link-group {
-    list-style:                         none;
-    text-decoration:                    none;
-}
-
-/* Switch Button (Light and Dark Mode) */
-.toggle {
-    width:                              56px;
-    height:                             56px;
-    border-radius:                      50%;
-    display:                            grid;
-    place-items:                        center;
-    cursor:                             pointer;
-    line-height:                        1;
-}
-
-.input {
-    display:                            none;
-}
-
-.icon {
-    grid-column:                        1 / 1;
-    grid-row:                           1 / 1;
-    transition:                         transform 500ms;
-    line-height:                        0.1;
-}
-
-.icon--moon {
-    transition-delay:                   200ms;
-    color:                              var(--moon);
-}
-
-.icon--sun {
-    transform:                          scale(0);
-    color:                              var(--sun);
-}
-
-#switch:checked + .icon--moon {
-    transform:                          rotate(360deg) scale(0);
-}
-
-#switch:checked ~ .icon--sun {
-    transition-delay:                   175ms;
-    transform:                          scale(1) rotate(360deg);
-}
-
 /* Switch Header Logo on Switch */
-.navigation-bar-container-logo-img-light,
-.navigation-bar-container-logo-img-dark {
+.nav-bar-container-logo-img-light,
+.nav-bar-container-logo-img-dark {
     display:                            none;
     width:                              var(--logo-nav-w);
     height:                             var(--logo-nav-h);
 }
 
-html.light .navigation-bar-container-logo-img-light {
+html.light .nav-bar-container-logo-img-light {
     display:                            block;
     width:                              var(--logo-nav-w);
     height:                             var(--logo-nav-h);
 }
 
-html.light .navigation-bar-container-logo-img-dark  {
+html.light .nav-bar-container-logo-img-dark  {
     display:                            none;
     width:                              var(--logo-nav-w);
     height:                             var(--logo-nav-h);
 }
 
-html.dark .navigation-bar-container-logo-img-light {
+html.dark .nav-bar-container-logo-img-light {
     display:                            none;
     width:                              var(--logo-nav-w);
     height:                             var(--logo-nav-h);
 }
 
-html.dark .navigation-bar-container-logo-img-dark  {
+html.dark .nav-bar-container-logo-img-dark  {
     display:                            block;
     width:                              var(--logo-nav-w);
     height:                             var(--logo-nav-h);
-}
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    #app-navigation-bar {
-        padding:                        var(--container-nav-padding);
-        padding-bottom:                 1.25rem;
-        box-sizing:                     border-box;
-        overflow:                       hidden;
-        position:                       relative;
-        z-index:                        var(--z-index-container-content);
-    }
-
-    #app-navigation-bar .navigation-bar-container {
-        width:                          100%;
-        margin:                         auto;
-        display:                        flex;
-        justify-content:                flex-start;
-        align-items:                    flex-start;
-        flex-wrap:                      wrap;
-        column-gap:                     1.5rem;
-        row-gap:                        2.25rem;
-    }
-
-    #app-navigation-bar .navigation-bar-logo-group {
-        width:                          100%;
-        position:                       relative;
-    }
-
-    #app-navigation-bar .navigation-bar-logo {
-        width:                          12.3125rem;
-        height:                         auto;
-        display:                        block;
-    }
-
-    #app-navigation-bar #nav-hover:hover {
-        color:                          var(--text-accent);
-        text-shadow:                    var(--shadow);
-        transition:                     color 0.3s;
-    }
-
-    #app-navigation-bar #nav-hover:hover:before {
-        width:                          100%;
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #app-navigation-bar .navigation-bar-container {
-        row-gap:                        0;
-        flex-direction:                 row;
-        flex-wrap:                      nowrap;
-        row-gap:                        2.5rem;
-    }
-}
-
-/* Small Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #app-navigation-bar .navigation-bar-container {
-        max-width:                      80rem;
-        display:                        flex;
-        flex-wrap:                      nowrap;
-        flex-direction:                 row;
-        position:                       relative;
-        align-items:                    center;
-        width:                          100%;
-        justify-content:                space-between;
-    }
-
-    #app-navigation-bar .navigation-bar-logo-group {
-        width:                          5rem;
-        max-width:                      24.1875rem;
-        margin-right:                   auto;
-    }
 }

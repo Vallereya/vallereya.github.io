@@ -1,26 +1,42 @@
-body {
+* {
     margin:                         0;
     padding:                        0;
-    font-size:                      1rem;
-    overflow-x:                     hidden;
-    display:                        block;
-
-    /*       MAIN BACKGROUND COLOR       */
-    background-color:               var(--bg-mask);
+    box-sizing:                     border-box;
 }
 
-.home {
-    /*background-color:               var(--bg-primary);*/
-    /*padding-top:                    1%;*/
+*,*::before,
+*::after {
+    box-sizing:                     border-box;
+}
+
+:root {
+    margin:                         0;
+    padding:                        0;
+    box-sizing:                     border-box;
+    view-transition-name:           root;
+    scrollbar-width:                var(--scrollbar-width);
+}
+
+html {
+    margin:                         0;
+    padding:                        0;
     overflow-x:                     hidden;
     display:                        block;
-    font-optical-sizing:            auto;
-    scroll-behavior:                smooth;
+}
+
+body {
+    font-size:                      var(--font-paragraph-font-size);
+    background-color:               var(--bg-base);
+    font-family:                    "Minimo", sans-serif;
+
+    scroll-padding-top:             6rem;
     background-size:                200px 200px;
     background-repeat:              repeat;
+    font-optical-sizing:            auto;
+    scroll-behavior:                smooth;
     font-kerning:                   normal;
-    scroll-padding-top:             6rem;
     interpolate-size:               allow-keywords;
+
     -webkit-locale:                 "en-us";
     -webkit-text-size-adjust:       100%;
     -webkit-font-kerning:           normal;

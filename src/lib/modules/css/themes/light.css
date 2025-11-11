@@ -1,0 +1,32 @@
+/* Light Theme | Light Mode */
+html.light {
+    --bg-base:                              var(--bg-light-mode-base);
+
+    --bg-primary:                           var(--bg-light-mode-primary);
+    --bg-secondary:                         var(--bg-light-mode-secondary);
+    --bg-accent:                            var(--bg-light-mode-accent);
+    --logo:                                 var(--logo-dark);
+    --type-logo:                            var(--logo-type-dark);
+    --txt-primary:                          var(--txt-light-mode-primary);
+    --txt-secondary:                        var(--txt-light-mode-secondary);
+    --border:                               var(--border-light-mode);
+    --border-card:                          var(--border-card-light-mode);
+    --highlight:                            var(--highlight-light-mode);
+    --gradient:                             var(--gradient-light-mode);
+    --gradient-hover:                       var(--gradient-hover-light-mode);
+    --shadow:                               var(--shadow-light-mode);
+    --button-register-active:               var(--gradient-hover-light-mode);
+    --logo-nav-w:                           var(--logo-nav-width);
+    --logo-nav-h:                           var(--logo-nav-height);
+    --logo-type-nav-w:                      var(--logo-type-nav-width);
+    --logo-type-nav-h:                      var(--logo-type-nav-height);
+    --footer-bg:                            var(--footer-bg-light-mode);
+    --border-card-transparent:              var(--border-card-transparent-light-mode);
+    --border-transparent:                   var(--border-transparent-light-mode);
+    --bg-mask:                              var(--bg-light-mode-mask);
+
+    --button-primary:                       oklch(0.2267 0 0);
+    --button-text-primary:                  oklch(0.8373 0 0);
+
+    scrollbar-color:                        var(--bg-light-mode-primary);
+}
