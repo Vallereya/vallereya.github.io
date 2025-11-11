@@ -47,9 +47,9 @@
     --paragraph-letter-spacing:             0.01rem;
 
     /* Logo Variables */
-    --logo:                                 url("$logo/v-logo.png");
-    --logo-light:                           url("$icons/v-logo-light.png");
-    --logo-dark:                            url("$icons/v-logo-dark.png");
+    --logo:                                 url("$logos/v-logo.png");
+    --logo-light:                           url("$logos/v-logo-light.png");
+    --logo-dark:                            url("$logos/v-logo-dark.png");
     --logo-type:                            url("$logos/dragonstone-logo-type.png");
     --logo-type-light:                      url("$logos/dragonstone-logo-type-light.png");
     --logo-type-dark:                       url("$logos/dragonstone-logo-type-dark.png");

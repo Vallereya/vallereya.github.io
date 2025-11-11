@@ -48,33 +48,6 @@
                         </NavigationMenu.Link>
                     </NavigationMenu.Item>
                 </NavigationMenu.List>
-                <NavigationMenu.List>
-                    <NavigationMenu.Item>
-                        <NavigationMenu.Link href="/portfolio">
-                                <span id="nav-hover">
-                                    <!-- portfolio -->
-                                </span>
-                        </NavigationMenu.Link>
-                    </NavigationMenu.Item>
-                </NavigationMenu.List>
-                <NavigationMenu.List>
-                    <NavigationMenu.Item>
-                        <NavigationMenu.Link href="/services">
-                                <span id="nav-hover">
-                                    <!-- services -->
-                                </span>
-                        </NavigationMenu.Link>
-                    </NavigationMenu.Item>
-                </NavigationMenu.List>
-                <NavigationMenu.List>
-                    <NavigationMenu.Item>
-                        <NavigationMenu.Link href="/about">
-                                <span id="nav-hover">
-                                    <!-- about -->
-                                </span>
-                        </NavigationMenu.Link>
-                    </NavigationMenu.Item>
-                </NavigationMenu.List>
             </NavigationMenu.Root>
         </div>
         <!-- Site Navigation Buttons -->
